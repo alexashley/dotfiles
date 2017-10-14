@@ -1,0 +1,13 @@
+[alias]
+  br = branch
+  co = checkout
+  cob = checkout -b
+  ci = commit
+  current = rev-parse --abbrev-ref HEAD
+  delta = !CURRENT=$(git current) && git diff --shortstat master $CURRENT
+  serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+  shelf = stash --include-untracked
+  short = rev-parse --short head
+  st = status
+[commit]
+	gpgsign = true
